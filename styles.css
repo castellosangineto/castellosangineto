@@ -1,0 +1,136 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+@font-face {font-family: "Tangerine"; src: url('src/tangerine.otf') format('otf'),  url('src/tangerine-webfont.woff') format('woff'), url('src/tangerine-webfont.woff2') format('woff2');}
+@font-face {font-family: "sans"; src: url('src/lausanne.woff2') format('woff2'),  url('src/lausanne.woff') format('woff'), url('/src/lausanne.otf') format('otf');}
+
+
+
+
+html,
+body {
+	background: #16321B;
+	font-family: 'sans';
+	overflow-x: hidden;
+	max-width: 100vw;
+}
+
+.container {
+	width: 100%;
+	height: 100vh;
+}
+
+.column {
+	width: 50%;
+	height: 100vh;
+}
+
+.caption {
+	font-family: sans;
+}
+
+.title-2 {
+	font-size: 60px;
+}
+
+
+.left {
+	position: relative;
+	left: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background: url("images/07.jpeg") no-repeat 50% 50%;
+	background-size: cover;
+	padding: 20px;
+}
+
+.right {
+	display: flex;
+	padding: 120px 0;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.img {
+	width: 160px;
+	height: 200px;
+	margin: 6px;
+}
+
+.img-1 {
+	background: url("images/001.jpg") no-repeat 50% 50%;
+	background-size: cover;
+}
+
+.img-2 {
+	background: url("images/006.jpg") no-repeat 50% 50%;
+	background-size: cover;
+}
+
+.img-3 {
+	background: url("images/002.jpg") no-repeat 50% 50%;
+	background-size: cover;
+}
+
+.img-4 {
+	background: url("images/005.jpg") no-repeat 50% 50%;
+	background-size: cover;
+}
+
+.header {
+	color: #e6822f;
+	font-family: Tangerine;
+	font-size: 40px;
+}
+
+.header h1 {
+	position: relative;
+}
+
+.ml12 .letter {
+	display: inline-block;
+	line-height: 1em;
+}
+
+.ml13 .letter {
+	display: inline-block;
+	line-height: 1em;
+}
+
+.link a {
+	color: #e6822f;
+	font-size: 40px;
+}
+
+@media (min-width: 900px) {
+	.container {
+		display: flex;
+	}
+
+	.images {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+@media (max-width: 900px) {
+	.column {
+		width: 100%;
+	}
+
+	.img {
+		width: 400px;
+		height: 400px;
+	}
+
+	.header {
+		font-size: 20px;
+		padding: 80px 0;
+	}
+}

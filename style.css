@@ -1,0 +1,27 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+@font-face {font-family: "Tangerine"; src: url('src/tangerine.otf') format('otf'),  url('src/tangerine-webfont.woff') format('woff'), url('src/tangerine-webfont.woff2') format('woff2');}
+@font-face {font-family: "sans"; src: url('src/lausanne.woff2') format('woff2'),  url('src/lausanne.woff') format('woff'), url('/src/lausanne.otf') format('otf');}
+
+.fullBodyContainer {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #e6822f;
+}
+
+.logoContainer,
+.DICEContainer {
+    /*border: 2px solid blue;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

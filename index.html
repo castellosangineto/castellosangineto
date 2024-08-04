@@ -19,9 +19,20 @@
     text-align: center;
   }
 
-a, time, h1, h2, span {
-    color: #fafade!important;
-}
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .body::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .body {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+  a, time, h1, h2, span {
+      color: #fafade!important;
+  }
 
   header {
     width: 100%;

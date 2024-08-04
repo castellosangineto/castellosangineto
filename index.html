@@ -1,26 +1,195 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Castello – Sangineto</title>
-    <meta name="description" content="Cocktail bar & Music Venue - San Gineto">
-    <link rel="stylesheet" href="style.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Castello Club and RestArt – Sangineto</title>
+<meta name="description" content="Cocktail bar & Music Venue - Sangineto Lido (CS)">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+  body { 
+    font-family: 'Arial', sans-serif; 
+    background-color: #1E3A70; 
+    color: #fafade; 
+    margin: 0; 
+    padding: 20px; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center;
+  }
+
+a, time, h1, h2, span {
+    color: #fafade!important;
+}
+
+  header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  header img {
+    width: 300px;
+    height: auto;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+  h1, p { 
+    margin: 5px 0;
+  }
+  .DICEContainer {
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+    overflow: auto;
+    text-align: left;
+  }
+  footer { 
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .instagram-link {
+    font-size: 30px;
+    margin-top: 10px;
+  }
+  .bird {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+  }
+  
+  .top-image {
+    top: 0;
+    width: 300px;
+    transform: translateY(-50%);
+    animation: rotate 60s linear infinite;
+  }
+  @keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  .social-media-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fa {
+    padding: 10px;
+  font-size: 25px; 
+  width: 30px;
+  height: 30px; 
+  line-height: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%; 
+  background: #fafade;
+  color: #1E3A70!important;
+  margin: 5px 2px;
+}
+
+
+
+.fa-facebook {
+  color: #3B5998; 
+}
+
+.fa-instagram {
+  color: #125688; 
+}
+
+</style>
 </head>
 <body>
+    <div style="height:150px; overflow:hidden; margin-top:-20px; margin-bottom: -60px;">
+<img style="margin-top: -220px;" src="soletto2.png" alt="Top Image" class="top-image">
+</div>
 
-    <div class="fullBodyContainer">
-        <div class="logoContainer">
-            <img src="src/images/c-white.png" alt="C logo" style="width: 30%;">
-        </div>
-        <div class="DICEContainer">
-            <div id="dice-event-list-widget"></div>
-            <script src="https://widgets.dice.fm/dice-event-list-widget.js" type="text/javascript"></script>
-            <script type="text/javascript">
-            DiceEventListWidget.create({"information":"simple","eventTitle":"event","showImages":true,"showAudio":true,"showNewBadge":false,"hidePostponed":false,"hideCancelled":false,"layout":"list","roundButtons":true,"theme":"dark","fontFamily":"inherit","partnerId":"29eefe02","apiKey":"xu5fkLluvI2ScyVPal031O9VBfQXCfKihimXeW00","version":2,"showPrice":true,"__p":true,"__pc":{"brandColor":"black","rounded":false},"title":"Castello Upcoming Events","highlightColour":"#f14a14","venues":["Castello Sangineto"]});
-            </script>
-        </div>
-    </div>
-    
+<header>
+  <img src="logocastello24.png" alt="Logo Castello">
+  <p>Via Alcide de Gasperi, 8<br><strong>Sangineto Lido (CS)</strong></p>
+</header>
+
+<div style="padding: 20px;">
+  <div class="DICEContainer">
+    <h1 style="text-align: center; margin-bottom: -10px; margin-top:10px;">Eventi in programma</h1>
+    <div id="dice-event-list-widget"></div>
+    <script src="https://widgets.dice.fm/dice-event-list-widget.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      DiceEventListWidget.create({
+        "information": "simple",
+        "eventTitle": "event",
+        "showImages": true,
+        "showAudio": true,
+        "showNewBadge": false,
+        "hidePostponed": false,
+        "hideCancelled": false,
+        "layout": "list",
+        "roundButtons": true,
+        "theme": "dark",
+        "fontFamily": "inherit",
+        "partnerId": "29eefe02",
+        "apiKey": "xu5fkLluvI2ScyVPal031O9VBfQXCfKihimXeW00",
+        "version": 2,
+        "showPrice": true,
+        "__p": true,
+        "__pc": {
+          "brandColor": "black",
+          "rounded": false
+        },
+        "title": "",
+        "highlightColour": "#f14a14",
+        "venues": ["Castello Sangineto"]
+      });
+    </script>
+  </div>
+  
+
+  <div id="birds"></div>
+  
+  <img style="width:370px; margin-bottom: 20px" src="castellosotto.png" alt="Castello Image" class="bottom-image">
+  <div class="social-media-buttons">
+
+    <a href="https://www.facebook.com/castellosanginetoofficial" class="fa fa-facebook"></a>
+    <a href="https://www.instagram.com/castellosangineto" class="fa fa-instagram"></a>
+  </div>
+
+  <script>
+  const birdImages = ['bird1.gif', 'bird2.gif', 'bird3.gif', 'bird4.gif'];
+  const birds = [];
+
+  birdImages.forEach((src, index) => {
+    const img = document.createElement('img');
+    img.src = src;
+    img.className = 'bird';
+    const initialX = Math.random() * (window.innerWidth - 70);
+    const initialY = Math.random() * (window.innerHeight - 70);
+    img.style.left = `${initialX}px`;
+    img.style.top = `${initialY}px`;
+    document.body.appendChild(img);
+    const dx = Math.random() < 0.5 ? 1 : -1.5;
+    const dy = Math.random() < 0.5 ? 1 : -1.5;
+    birds.push({ img, dx, dy });
+  });
+
+  function moveBirds() {
+    birds.forEach(bird => {
+      let x = parseFloat(bird.img.style.left) + bird.dx;
+      let y = parseFloat(bird.img.style.top) + bird.dy;
+      
+      if (x <= 0 || x >= window.innerWidth - 70) bird.dx *= -1;
+      if (y <= 0 || y >= window.innerHeight - 70) bird.dy *= -1;
+      
+      bird.img.style.left = `${x}px`;
+      bird.img.style.top = `${y}px`;
+    });
+  }
+
+  setInterval(moveBirds, 35);
+  </script>
+</div>
 </body>
 </html>
